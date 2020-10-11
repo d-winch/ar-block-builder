@@ -18,7 +18,7 @@ public class Builder : MonoBehaviour
     private int selectedBlock;
     [SerializeField]
     public float blockScale;
-    // Start is called before the first frame update
+
     void Awake()
     {
         raycastManager = GetComponent<ARRaycastManager>();
