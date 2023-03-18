@@ -58,7 +58,11 @@ public class BlockHighlighter : MonoBehaviour {
         {
             // Get the object that was hit and pass to highlight method
             GameObject hitObject = rayHit.collider.gameObject;
-            HighlightObject(hitObject);
+            Debug.Log(hitObject.tag);
+            if (hitObject.tag == "Block")
+            {
+                HighlightObject(hitObject);
+            }
         } else
         {
             // If ray didn't hit, remove the highlight (no block in cursor)

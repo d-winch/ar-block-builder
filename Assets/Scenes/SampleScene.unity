@@ -135,6 +135,9 @@ GameObject:
   - component: {fileID: 40919620}
   - component: {fileID: 40919617}
   - component: {fileID: 40919619}
+  - component: {fileID: 40919621}
+  - component: {fileID: 40919623}
+  - component: {fileID: 40919622}
   m_Layer: 0
   m_Name: AR Session Origin
   m_TagString: MainCamera
@@ -221,8 +224,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1760703bbd54c04488a8d10600262ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PlanePrefab: {fileID: 0}
-  m_DetectionMode: -1
+  m_PlanePrefab: {fileID: 6238762728101065427, guid: a91290eb2fbe8443c82fa671a0d431d8,
+    type: 3}
+  m_DetectionMode: 1
 --- !u!114 &40919620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,6 +241,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlight: {fileID: 3378422863465640790, guid: 206ae08c31fd24bb99b6b0d608307a14,
     type: 3}
+--- !u!114 &40919621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40919614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bac3e598f45bb6c4ebea41d409ab4ea0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &40919622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40919614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d180956a54db4646a1c6342921672ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &40919623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40919614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f66da7470dce8f4d821d71dd2b1d4ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_DestroyOnRemoval: 1
+  m_VertexChangedThreshold: 0.01
 --- !u!1 &63068014
 GameObject:
   m_ObjectHideFlags: 0
@@ -2810,10 +2852,10 @@ RectTransform:
   m_Father: {fileID: 1852027428}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -101}
-  m_SizeDelta: {x: 1080, y: 37.3}
+  m_SizeDelta: {x: 440, y: 37.300003}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1407519588
 MonoBehaviour:
@@ -2858,7 +2900,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1139853372}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.5595855
+  m_Size: 0.57046634
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

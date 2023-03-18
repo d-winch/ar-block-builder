@@ -21,7 +21,9 @@ public class Builder : MonoBehaviour
 
     void Awake()
     {
+        Debug.Log("raycastManager Instantiating");
         raycastManager = GetComponent<ARRaycastManager>();
+        Debug.Log("raycastManager Instantiated");
     }
 
     public void OnBuildButtonPressed()
@@ -32,6 +34,7 @@ public class Builder : MonoBehaviour
 
         if (Physics.Raycast(rayToCast, out hitInfo, 800, blockLayer))
         {
+            Debug.Log("raycastManager hit an existing block");
             GameObject raycastReturn = hitInfo.collider.gameObject.transform.parent.gameObject;
 
             /*text.text = hitInfo.normal.ToString() + " "
@@ -65,11 +68,13 @@ public class Builder : MonoBehaviour
 
     public void SetBlock(int block)
     {
+        Debug.Log("SetBlock to block id " + block);
         selectedBlock = block;
     }
 
     void Build(Vector3 position, Quaternion rotation)
     {
+        Debug.Log("Building block at position: " + position + " with rotation: " + rotation);
         GameObject block = Instantiate(blocks[selectedBlock], position, rotation);
         block.transform.localScale = new Vector3(blockScale, blockScale, blockScale);
     }
@@ -81,12 +86,14 @@ public class Builder : MonoBehaviour
 
         if (Physics.Raycast(rayToCast, out hitInfo, 800, blockLayer))
         {
+            Debug.Log("Deleting block gameObject: " + hitInfo.collider.gameObject.name);
             Destroy(hitInfo.collider.gameObject);
         }
     }
 
     public void SetBlockScale(Slider slider)
     {
+        Debug.Log("SetBlockScale with value: " + slider.value);
         blockScale = slider.value;
     }
 }
