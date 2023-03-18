@@ -21,9 +21,7 @@ public class Builder : MonoBehaviour
 
     void Awake()
     {
-        Debug.Log("raycastManager Instantiating");
         raycastManager = GetComponent<ARRaycastManager>();
-        Debug.Log("raycastManager Instantiated");
     }
 
     public void OnBuildButtonPressed()

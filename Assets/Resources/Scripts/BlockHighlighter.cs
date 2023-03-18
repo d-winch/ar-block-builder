@@ -58,8 +58,7 @@ public class BlockHighlighter : MonoBehaviour {
         {
             // Get the object that was hit and pass to highlight method
             GameObject hitObject = rayHit.collider.gameObject;
-            Debug.Log(hitObject.tag);
-            if (hitObject.tag == "Block")
+            if (hitObject.CompareTag("Block"))
             {
                 HighlightObject(hitObject);
             }
